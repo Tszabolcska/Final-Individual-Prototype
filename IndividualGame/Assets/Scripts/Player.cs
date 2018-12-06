@@ -24,6 +24,8 @@ public class Player : MonoBehaviour {
         }
         else
         {
+            float conditioning = col.GetComponent<Enemy>().nutrients;
+            Stamina.stamina += conditioning;
             float flavor = col.GetComponent<Enemy>().nutrients;
             Health.health += flavor;
             int scoreValue = col.GetComponent<Enemy>().scoreValue;

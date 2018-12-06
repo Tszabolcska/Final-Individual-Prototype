@@ -20,13 +20,9 @@ public class Timer : MonoBehaviour {
         string seconds = (t).ToString("f0");
         timerText.text = seconds;
 
-        if (t >= 10)
+        if (t >= 30)
         {
             Health.health -= 0.2f;
-        }
-        else if (t >= 50)
-        {
-            Health.health -= 0.3f;
         }
     }
 }
