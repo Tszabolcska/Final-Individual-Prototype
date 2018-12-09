@@ -6,14 +6,24 @@ using UnityEngine;
 
 
 public class Player : MonoBehaviour {
-
+    public GameObject predator;
     public GameManager gameManager;
+    Animator anim;
 
+    void Start()
+    {
+        anim = predator.GetComponent<Animator>();
+    }
+    
+    
     public void OnTriggerEnter(Collider col)
     {
+        
         Destroy(col.gameObject);
-        
-        
+
+        //bool eat = true;
+        //anim.SetBool("Eat", eat);
+
         if (col.tag == "sick")
         {
             float staminaHit = col.GetComponent<Enemy>().staminaDamage;
@@ -21,6 +31,7 @@ public class Player : MonoBehaviour {
             float flavor = col.GetComponent<Enemy>().nutrients;
             Health.health += flavor;
             gameManager.SickDie();
+            
         }
         else
         {
@@ -31,6 +42,7 @@ public class Player : MonoBehaviour {
             int scoreValue = col.GetComponent<Enemy>().scoreValue;
             Score.score += scoreValue;
             gameManager.EnemyDie();
+            
         }
     }
 
