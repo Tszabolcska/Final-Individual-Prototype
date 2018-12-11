@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-E:/GIMM/GIMM350/MileStone6/Latest Individual Game/IndividualGame.exe
+C:/Users/Travis/Videos/GIMM/GIMM350/Final-Individual-Prototype/IndividualGame.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/HowToPlay.unity
